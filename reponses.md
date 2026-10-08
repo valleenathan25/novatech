@@ -38,3 +38,18 @@ git status montrait que index.html était modifié.
 Je ne voulais pas garder ces changements. Alors j'ai tapé git restore index.html pour remettre le fichier comme au dernier commit.
 
 Ensuite git status ne montrait plus rien à enregistrer. Le fichier était revenu comme avant.
+
+
+Mission 8
+
+J'ai ajouté body { display: none; } dans style.css et j'ai fait le commit Test affichage. Ce commit avait le numéro a5322f4.
+
+Ce commit n'était pas bon et je ne l'avais envoyé à personne. Alors je l'ai annulé avec git reset HEAD~1
+
+HEAD~1 veut dire le commit juste avant. git reset ramène la branche sur ce commit. Le commit Test affichage n'est plus dans l'historique.
+
+Sans option git reset ne touche pas aux fichiers. Il enlève juste le commit et le fichier n'est plus dans le staging. C'est pour ça que la règle display none était encore dans style.css.
+
+Avec git reset --hard HEAD~1 la règle aurait aussi été effacée du fichier.
+
+Ensuite j'ai enlevé la mauvaise règle avec git restore style.css
