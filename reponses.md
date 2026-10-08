@@ -121,3 +121,50 @@ Pour une petite correction de bug la version suivante est v1.0.1
 Pour une nouvelle fonction qui ne casse rien la version suivante est v1.1.0
 
 Pour une grosse refonte qui change tout la version suivante est v2.0.0
+
+
+Mission 13
+
+Mon projet a maintenant un fichier debug.log un dossier cache et un fichier .env. Il ne faut pas les mettre dans Git.
+
+Avec git status je les voyais dans les nouveaux fichiers.
+
+J'ai créé un fichier .gitignore avec ces trois lignes
+
+debug.log
+
+cache/
+
+.env
+
+Après ça git status ne les montrait plus. Il montrait seulement .gitignore.
+
+J'ai fait un commit avec .gitignore pour qu'il soit dans le projet. Comme ça tout le monde a les mêmes règles.
+
+
+Partie 10
+
+À la fin j'ai tapé git status pour voir qu'il ne reste rien à enregistrer. Puis git log --oneline --graph --all pour voir tout l'historique avec la version v1.0.0.
+
+
+Questions finales
+
+1. La zone de travail c'est mes fichiers tels que je les modifie. Le staging c'est ce que j'ai choisi avec git add pour le prochain commit. L'historique c'est tous les commits déjà enregistrés.
+
+2. Sur une branche à part je peux travailler sans casser main. Si ça ne marche pas main reste propre. Quand c'est fini je fusionne.
+
+3. git reset enlève le commit de l'historique. C'est bien seulement si personne ne l'a. git revert garde le commit et ajoute un commit qui fait l'inverse. C'est mieux quand le commit est déjà partagé.
+
+4. C'est utile quand je n'ai pas fini mon travail et qu'il faut faire autre chose tout de suite. Par exemple une correction urgente sur main. Je mets mon travail de côté avec git stash et je le reprends après.
+
+5. Avec cherry-pick je prends seulement le commit que je veux. Une fusion prend tous les commits de la branche même ceux qui ne sont pas prêts.
+
+6. HEAD montre où je suis. C'est le commit sur lequel je travaille en ce moment.
+
+7. HEAD~2 c'est le commit deux crans avant HEAD.
+
+8. Un tag met un nom sur un commit important. Par exemple v1.0.0 pour une version. Comme ça on le retrouve facilement.
+
+9. Avec des petits commits on comprend vite ce qui a changé. Si un commit pose un problème on peut l'annuler sans perdre le reste.
+
+10. Certains fichiers ne servent à rien dans le projet comme les logs ou le cache. D'autres sont secrets comme le fichier .env avec les mots de passe. Il ne faut pas les mettre sur GitHub.
