@@ -66,3 +66,35 @@ La promotion était une erreur. Je l'ai annulée avec git revert 487399a
 Git a fait un nouveau commit c246c6e qui enlève la promotion. Dans l'historique on voit encore Ajout promotion et juste après le commit qui l'annule.
 
 Ce n'est pas comme à la mission 8. Là le commit était partagé. Si je l'enlève avec reset mon historique ne sera plus le même que celui des autres et ça va poser des problèmes. Revert n'efface rien. Il ajoute un commit qui fait l'inverse. Comme ça tout le monde garde le même historique.
+
+
+Mission 10
+
+J'ai commencé la page equipe.html sur une branche equipe. Le travail n'était pas fini donc je ne voulais pas faire de commit.
+
+C'était un nouveau fichier. Alors je l'ai d'abord ajouté avec git add equipe.html sinon git stash ne le prend pas.
+
+Ensuite j'ai tapé git stash pour mettre mon travail de côté. Avec git stash list j'ai vu qu'il était bien gardé.
+
+Je suis allé sur main avec git switch main. J'ai corrigé le titre de la page d'accueil qui était écrit Acceuil au lieu de Accueil. J'ai fait le commit 648e4c0 et je l'ai envoyé.
+
+Après je suis revenu sur la branche equipe avec git switch equipe. J'ai récupéré mon travail avec git stash pop.
+
+J'ai fini la page avec les trois personnes de l'équipe. J'ai fait le commit d2db9bf puis j'ai fusionné la branche dans main et je l'ai supprimée.
+
+
+Mission 11
+
+J'ai créé une branche test avec git switch -c test et j'ai fait trois commits.
+
+f4faf1f change la couleur du menu pour tester.
+
+221f859 corrige la faute dans le grand titre. Bienvenu devient Bienvenue.
+
+2173a39 ajoute un texte de test en bas de la page.
+
+Je voulais garder seulement la correction de la faute. Alors je suis revenu sur main et j'ai tapé git cherry-pick 221f859
+
+Git a copié ce commit sur main avec un nouveau numéro 234fa82. Les couleurs et le texte de test ne sont pas sur main.
+
+Une fusion normale n'était pas bonne ici. Elle aurait pris les trois commits de la branche test. Les couleurs de test et le texte de test seraient arrivés sur le vrai site.
