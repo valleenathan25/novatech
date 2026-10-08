@@ -168,3 +168,14 @@ Questions finales
 9. Avec des petits commits on comprend vite ce qui a changé. Si un commit pose un problème on peut l'annuler sans perdre le reste.
 
 10. Certains fichiers ne servent à rien dans le projet comme les logs ou le cache. D'autres sont secrets comme le fichier .env avec les mots de passe. Il ne faut pas les mettre sur GitHub.
+
+
+Remarque sur l'historique
+
+Pendant le TP j'ai fait deux fois git push --force sur GitHub.
+
+La première fois c'était au début. Le message du commit du style ne me plaisait pas et j'ai voulu refaire le README. J'ai refait ces commits puis j'ai forcé l'envoi.
+
+La deuxième fois c'était à la mission 9. Ma commande git revert n'avait pas marché parce que j'avais mis une mauvaise option. Ma réponse avait donc un mauvais numéro de commit. J'ai refait le revert juste après le commit Ajout promotion et j'ai corrigé la réponse.
+
+Le commit Ajout promotion n'a pas été supprimé. Il est toujours dans l'historique avec le commit qui l'annule juste après.
