@@ -98,3 +98,26 @@ Je voulais garder seulement la correction de la faute. Alors je suis revenu sur 
 Git a copié ce commit sur main avec un nouveau numéro 234fa82. Les couleurs et le texte de test ne sont pas sur main.
 
 Une fusion normale n'était pas bonne ici. Elle aurait pris les trois commits de la branche test. Les couleurs de test et le texte de test seraient arrivés sur le vrai site.
+
+
+Mission 12
+
+Le site marche bien. Avec git log --oneline j'ai vu que le dernier commit était a6244a2.
+
+J'ai créé la version avec git tag -a v1.0.0 -m "Première version stable de NovaTech"
+
+J'ai vérifié avec git tag puis j'ai vu les infos de la version avec git show v1.0.0
+
+On voit le nom de la version qui l'a créée la date le message et le commit a6244a2.
+
+Le premier chiffre 1 est la version majeure. On le change quand on refait beaucoup de choses et que l'ancien ne marche plus pareil.
+
+Le deuxième chiffre 0 est la version mineure. On le change quand on ajoute une chose nouvelle sans rien casser.
+
+Le troisième chiffre 0 est le correctif. On le change quand on répare un petit bug.
+
+Pour une petite correction de bug la version suivante est v1.0.1
+
+Pour une nouvelle fonction qui ne casse rien la version suivante est v1.1.0
+
+Pour une grosse refonte qui change tout la version suivante est v2.0.0
