@@ -53,3 +53,16 @@ Sans option git reset ne touche pas aux fichiers. Il enlève juste le commit et 
 Avec git reset --hard HEAD~1 la règle aurait aussi été effacée du fichier.
 
 Ensuite j'ai enlevé la mauvaise règle avec git restore style.css
+
+
+Mission 9
+
+J'ai ajouté la promotion à -90 % sur la page d'accueil et j'ai fait le commit Ajout promotion. Il a le numéro 487399a.
+
+Je l'ai envoyé sur GitHub. Donc les autres de l'équipe peuvent déjà l'avoir.
+
+La promotion était une erreur. Je l'ai annulée avec git revert 487399a
+
+Git a fait un nouveau commit c246c6e qui enlève la promotion. Dans l'historique on voit encore Ajout promotion et juste après le commit qui l'annule.
+
+Ce n'est pas comme à la mission 8. Là le commit était partagé. Si je l'enlève avec reset mon historique ne sera plus le même que celui des autres et ça va poser des problèmes. Revert n'efface rien. Il ajoute un commit qui fait l'inverse. Comme ça tout le monde garde le même historique.
